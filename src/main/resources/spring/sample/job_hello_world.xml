@@ -15,4 +15,5 @@
          <tasklet ref = "tasklet"/>   
       </batch:step>    
    </batch:job>  
+   <bean class="com.honsoft.springbatch.listener.ApplicationContextAwareBean" />
 </beans> 

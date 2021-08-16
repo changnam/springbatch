@@ -5,7 +5,7 @@
       http://www.springframework.org/schema/batch/spring-batch-2.2.xsd
       http://www.springframework.org/schema/beans
       http://www.springframework.org/schema/beans/spring-beans-3.2.xsd "> 
-   <import resource="context.xml" />      
+   <import resource="../config/context.xml" />      
    <!-- Defining a bean --> 
    <bean id = "tasklet" class = "com.honsoft.springbatch.processor.MyTasklet" />  
    <!-- Defining a job--> 
@@ -15,5 +15,5 @@
          <tasklet ref = "tasklet"/>   
       </batch:step>    
    </batch:job>  
-   <bean class="com.honsoft.springbatch.listener.ApplicationContextAwareBean" />
+
 </beans> 

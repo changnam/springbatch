@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<tutorials> 
+   <tutorial>      
+      <tutorial_id>1001</tutorial_id> 
+      <tutorial_author>Sanjay</tutorial_author> 
+      <tutorial_title>Learn Java</tutorial_title> 
+      <submission_date>06-05-2007</submission_date> 
+      <tutorial_icon>https://www.tutorialspoint.com/java/images/java-minilogo.jpg</tutorial_icon> 
+      <tutorial_description>Java is a high-level programming language originally 
+         developed by Sun Microsystems and released in 1995. 
+         Java runs on a variety of platforms. 
+         This tutorial gives a complete understanding of Java.');</tutorial_description> 
+   </tutorial> 
+    
+   <tutorial>      
+      <tutorial_id>1002</tutorial_id> 
+      <tutorial_author>Abdul S</tutorial_author> 
+      <tutorial_title>Learn MySQL</tutorial_title> 
+      <submission_date>19-04-2007</submission_date> 
+      <tutorial_icon>https://www.tutorialspoint.com/mysql/images/mysql-minilogo.jpg</tutorial_icon> 
+      <tutorial_description>MySQL is the most popular 
+         Open Source Relational SQL database management system. 
+         MySQL is one of the best RDBMS being used for developing web-based software applications. 
+         This tutorial will give you quick start with MySQL 
+         and make you comfortable with MySQL programming.</tutorial_description> 
+   </tutorial> 
+    
+   <tutorial>
+      <tutorial_id>1003</tutorial_id> 
+      <tutorial_author>Krishna Kasyap</tutorial_author> 
+      <tutorial_title>Learn JavaFX</tutorial_title> 
+      <submission_date>06-07-2017</submission_date> 
+      <tutorial_icon>https://www.tutorialspoint.com/javafx/images/javafx-minilogo.jpg</tutorial_icon> 
+      <tutorial_description>JavaFX is a Java library used to build Rich Internet Applications. 
+         The applications developed using JavaFX can run on various devices 
+         such as Desktop Computers, Mobile Phones, TVs, Tablets, etc. 
+         This tutorial, discusses all the necessary elements of JavaFX that are required
+         to develop effective Rich Internet Applications</tutorial_description> 
+   </tutorial> 
+</tutorials>

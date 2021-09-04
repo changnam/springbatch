@@ -10,11 +10,13 @@ import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 import com.honsoft.springbatch.tasklet.FileExplorerTasklet;
 
 @Configuration
 @EnableBatchProcessing
+@Import({MysqlDataSourceConfig.class})
 public class FileExplorerBatchConfig {
 	
 	@Autowired

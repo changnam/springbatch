@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Contracts>
+    <Contract ContractId="1001">
+        <Carrier>CMU</Carrier>
+        <ContractName>Contract reg1</ContractName>
+        <ProcessingTime>2018-07-29T00:00:00+05:30</ProcessingTime>
+    </Contract>
+    <Contract ContractId="1001">
+        <Carrier>NLU</Carrier>
+        <ContractName>Contract reg2</ContractName>
+        <ProcessingTime>2018-07-30T00:00:00+05:30</ProcessingTime>
+    </Contract>
+    <Contract ContractId="1001">
+        <Carrier>HLA</Carrier>
+        <ContractName>Contract reg3</ContractName>
+        <ProcessingTime>2018-07-01T00:00:00+05:30</ProcessingTime>
+    </Contract>
+    <Contract ContractId="1001">
+        <Carrier>GMR</Carrier>
+        <ContractName>Contract reg4</ContractName>
+        <ProcessingTime>2018-05-29T00:00:00+05:30</ProcessingTime>
+    </Contract>
+    <Contract ContractId="1001">
+        <Carrier>BLU</Carrier>
+        <ContractName>Contract reg5</ContractName>
+        <ProcessingTime>2018-04-22T00:00:00+05:30</ProcessingTime>
+    </Contract>
+</Contracts>

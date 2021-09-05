@@ -60,6 +60,24 @@
 		<property name="password" value="Shoppingnt2021!@" />
 	</bean>
 	
+	   <bean id="namedParamJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+        <constructor-arg ref="oracleDataSource" />
+    </bean>
+    
+    <bean id="oracleDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver" />
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521/JERRY" />
+        <property name="username" value="cddba1" />
+        <property name="password" value="cn0012" />
+    </bean>
+
+    <bean id="baseDAO" abstract="true">
+        <description>common configuration for all DAO classes
+        </description>
+        <property name="dataSource" ref="oracleDataSource" />        
+    </bean>
+    
+	
 	<!-- create job-meta tables automatically , 최초 한번만 실행할것--> 
 	<!-- 
    <jdbc:initialize-database data-source = "dataSource">   

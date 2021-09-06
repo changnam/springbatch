@@ -7,6 +7,7 @@ import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
@@ -23,6 +24,7 @@ import com.honsoft.springbatch.domain.Person;
 import com.honsoft.springbatch.domain.StudentDTO;
 import com.honsoft.springbatch.processor.StudentItemProcessor;
 import com.honsoft.springbatch.reader.InMemoryStudentReader;
+import com.honsoft.springbatch.writer.MyJdbcBatchItemWriter;
 import com.honsoft.springbatch.writer.StudentItemWriter;
 import com.honsoft.springbatch.writer.StudentPreparedStatementSetter;
 
@@ -42,7 +44,7 @@ public class StudentProcessingBatchConfig {
 
 	@Bean
 	public Job myJob(@Qualifier("step2")Step step2) {
-		return jobBuilderFactory.get("myJob").start(step1()).next(step2).build();
+		return jobBuilderFactory.get("myJob").incrementer(new RunIdIncrementer()).start(step1()).next(step2).build();
 	}
 
 	@Bean
@@ -75,7 +77,8 @@ public class StudentProcessingBatchConfig {
 	@Bean
 	public ItemWriter<StudentDTO> csvFileDatabaseItemWriter(@Qualifier("mysqlDataSource") DataSource dataSource,
 			NamedParameterJdbcTemplate jdbcTemplate) {
-		JdbcBatchItemWriter<StudentDTO> databaseItemWriter = new JdbcBatchItemWriter<>();
+		//JdbcBatchItemWriter<StudentDTO> databaseItemWriter = new JdbcBatchItemWriter<>();
+		JdbcBatchItemWriter<StudentDTO> databaseItemWriter = new MyJdbcBatchItemWriter();
 		databaseItemWriter.setDataSource(dataSource);
 		databaseItemWriter.setJdbcTemplate(jdbcTemplate);
 
